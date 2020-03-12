@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="name" default="$(env HOSTNAME '')"/>
+  <push_ros_namespace namespace="$(arg name)"/>
+  <node name="ups" exec="ups_node" pkg="odroid_ups"/>
+</launch>
