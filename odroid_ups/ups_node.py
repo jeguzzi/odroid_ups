@@ -31,8 +31,8 @@ class Ups(rclpy.node.Node):  # type: ignore
     def update(self) -> None:
         ac_ok = wp.digitalRead(AC_OK)
         batt_ok = wp.digitalRead(BATT_OK)
-        self.ac_pub.publish(Bool(data=ac_ok))
-        self.batt_pub.publish(Bool(data=batt_ok))
+        self.ac_pub.publish(Bool(data=bool(ac_ok)))
+        self.batt_pub.publish(Bool(data=bool(batt_ok)))
 
 
 def main(args: Any = None) -> None:
