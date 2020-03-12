@@ -1,7 +1,7 @@
 from typing import Any
 import rclpy.node
 import rclpy
-import wiringpi2 as wp
+import odroid_wiringpi as wp
 from std_msgs.msg import Bool
 
 AC_OK = 0
