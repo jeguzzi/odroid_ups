@@ -24,8 +24,8 @@ class Ups(rclpy.node.Node):  # type: ignore
     def __init__(self) -> None:
         super(Ups, self).__init__('ups')
         setup_gpio()
-        self.ac_pub = self.create_publisher(Bool, 'ac', 1)
-        self.batt_pub = self.create_publisher(Bool, 'battery', 1)
+        self.ac_pub = self.create_publisher(Bool, '~/ac', 1)
+        self.batt_pub = self.create_publisher(Bool, '~/battery', 1)
         self.create_timer(1.0, self.update)
 
     def update(self) -> None:
